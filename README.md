@@ -1,8 +1,12 @@
+# Customized-LLM-APP
+
 Building a Retrieval-Augmented Generation (RAG) bot can significantly enhance the capabilities of a language model by incorporating external knowledge to generate more accurate and contextually relevant responses. This guide will walk you through creating a simple RAG bot using Gradio and the Hugging Face APIs.
 
 But how does RAG enhance LLM’s performance?
 
 RAG improves the performance of language models by augmenting them with external documents. This method retrieves relevant documents based on the user query and combines them with the original prompt before passing them to the language model for response generation. This approach ensures that the language model can access up-to-date and domain-specific information without the need for extensive retraining.
+
+
 
 A common scenario of RAG helping LLM (Source)
 
@@ -11,6 +15,7 @@ The basic steps in RAG can be simplified as follows:
 Input: The question to which the LLM system responds is referred to as the input. If no RAG is used, the LLM is directly used to respond to the question.
 
 Indexing: If RAG is used, then a series of related documents are indexed by chunking them first, generating embeddings of the chunks, and indexing them into a vector store. At inference, the query is also embedded in a similar way.
+
 
 Basic retrieval steps in RAG. (Source)
 
@@ -28,11 +33,11 @@ The all-* models were trained on all available training data (more than 1 billio
 
 We need the following ingredients:
 
-A PDF as your knowledgebase
+1. A PDF as your knowledgebase
 
-A requirements.txt file
+2. A requirements.txt file
 
-An app.py file
+3. An app.py file
 
-An account on Hugging Face (See this blog to learn about building a LLM chatbot in Hugging Face)
+4. An account on Hugging Face (See this blog to learn about building a LLM chatbot in Hugging Face)
 An example chatbot using [Gradio](https://gradio.app), [`huggingface_hub`](https://huggingface.co/docs/huggingface_hub/v0.22.2/en/index), and the [Hugging Face Inference API](https://huggingface.co/docs/api-inference/index).
